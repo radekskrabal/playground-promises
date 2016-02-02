@@ -1,0 +1,17 @@
+{
+  "name": "Promises",
+  "version": "1.0.0",
+  "dependencies": {
+    "babel-polyfill": "*",
+    "jquery": "^2.2.0"
+  },
+  "devDependencies": {
+    "babel": "*",
+    "rimraf": "*",
+    "webpack": "*"
+  },
+  "scripts": {
+    "build": "webpack",
+    "prebuild": "rimraf .\\dist"
+  }
+}
