@@ -8,12 +8,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <script src="node_modules/jquery/dist/jquery.js"></script>
-        <script src="index.js"></script>
+        <script data-main="dist/index" src="node_modules/requirejs/require.js"></script>
     </head>
-    <body>
+    <body style="overflow: hidden">
         <h1>Promise API Playground</h1>
-        <script src="index.js"></script>
 
-        <p id="text">Text</p>
+        <p id="text" style="display: block; top: 1000em; left: 1000em; position: absolute;">Text</p>
     </body>
 </html>

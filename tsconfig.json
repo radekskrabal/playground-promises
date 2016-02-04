@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "module": "amd",
+    "target": "es5",
+    "outDir": "./dist",
+    "sourceMap": true,
+    "removeComments": false,
+    "suppressExcessPropertyErrors": false
+  },
+  "files": [
+    "./definitions/es6-promise.d.ts",
+    "./definitions/jquery.d.ts",
+    "./src/index.ts",
+    "./src/Person.ts",
+    "./src/Timer.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

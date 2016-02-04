@@ -2,12 +2,13 @@
   "name": "Promises",
   "version": "1.0.0",
   "dependencies": {
-    "babel-polyfill": "*",
-    "jquery": "^2.2.0"
+    "jquery": "^2.2.0",
+    "requirejs": "*"
   },
   "devDependencies": {
-    "babel": "*",
     "rimraf": "*",
+    "ts-loader": "*",
+    "typescript": "*",
     "webpack": "*"
   },
   "scripts": {
