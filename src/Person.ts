@@ -1,11 +1,9 @@
 import {Timer} from "./Timer";
 
 export class Person {
-    private id:string;
     private name:string;
 
     public constructor(name:string) {
-        this.id = new Date().getTime().toString();
         this.name = name;
     }
 
