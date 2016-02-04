@@ -1,14 +1,14 @@
 import {Timer} from "./Timer";
 
 export class Person {
-    private name:string;
+    private name: string;
 
-    public constructor(name:string) {
+    public constructor(name: string) {
         this.name = name;
     }
 
-    public doSomething():Promise<Function> {
-        return new Promise((resolve:Function, reject:Function):void => {
+    public doSomething(): Promise<Function> {
+        return new Promise((resolve: Function, reject: Function):void => {
             let iterations = 10000, // 10k
                 timer = new Timer();
 
@@ -36,8 +36,8 @@ export class Person {
         });
     }
 
-    public doSomethingElse():Promise<Function> {
-        return new Promise((resolve:Function, reject:Function):void => {
+    public doSomethingElse(): Promise<Function> {
+        return new Promise((resolve: Function, reject: Function):void => {
             let iterations = 100000,  // 100k
                 timer = new Timer();
 
@@ -59,8 +59,8 @@ export class Person {
         });
     }
 
-    public doSomethingDifferent():Promise<Function> {
-        return new Promise((resolve:Function, reject:Function):void => {
+    public doSomethingDifferent(): Promise<Function> {
+        return new Promise((resolve: Function, reject: Function):void => {
             let iterations = 100000,  // 100k
                 timer = new Timer();
 
@@ -82,11 +82,11 @@ export class Person {
         });
     }
 
-    private createEl(tag:string, id:string, text:string):any {
+    private createEl(tag: string, id: string, text: string): any {
         return $('body').append(`<${tag} id="${id}">${text}</${tag}>`);
     }
 
-    private getTextEl():any {
+    private getTextEl(): any {
         return $('#text')
     }
 }
