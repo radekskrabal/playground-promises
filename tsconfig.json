@@ -1,14 +1,13 @@
 {
   "compilerOptions": {
     "module": "amd",
-    "target": "es5",
+    "target": "es6",
     "outDir": "./dist",
-    "sourceMap": true,
+    "inlineSourceMap": true,
     "removeComments": false,
     "suppressExcessPropertyErrors": false
   },
   "files": [
-    "./definitions/es6-promise.d.ts",
     "./definitions/jquery.d.ts",
     "./src/index.ts",
     "./src/Person.ts",

@@ -8,12 +8,10 @@
   },
   "devDependencies": {
     "rimraf": "*",
-    "ts-loader": "*",
-    "typescript": "*",
-    "webpack": "*"
+    "typescript": "*"
   },
   "scripts": {
-    "build": "webpack",
+    "build": "tsc",
     "prebuild": "rimraf .\\dist"
   }
 }

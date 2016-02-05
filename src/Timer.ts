@@ -19,7 +19,7 @@ export class Timer {
         performance.clearMeasures(this.getMeasureName());
     }
 
-    public formatDuration(trunc: boolean = true): string {
+    public formatDuration(trunc: boolean): string {
         if (trunc === true) {
             // return Math.trunc(this.duration).toString();
             return Math.floor(this.duration).toString();

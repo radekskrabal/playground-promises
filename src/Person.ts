@@ -30,14 +30,14 @@ export class Person {
             timer.end();
 
             // update UI
-            this.createEl('p', '#first-result', `doSomething took ${timer.formatDuration()} ms`);
+            this.createEl('p', '#first-result', `doSomething took ${timer.formatDuration(true /* truncate */)} ms`);
 
             resolve();
         });
     }
 
     public doSomethingElse(): Promise<Function> {
-        return new Promise((resolve: Function, reject: Function):void => {
+        return new Promise((resolve: Function, reject: Function): void => {
             let iterations = 100000,  // 100k
                 timer = new Timer();
 
@@ -53,14 +53,14 @@ export class Person {
             timer.end();
 
             // update UI
-            this.createEl('p', '#second-result', `doSomethingElse took ${timer.formatDuration()} ms`);
+            this.createEl('p', '#second-result', `doSomethingElse took ${timer.formatDuration(true /* truncate */)} ms`);
 
             resolve();
         });
     }
 
     public doSomethingDifferent(): Promise<Function> {
-        return new Promise((resolve: Function, reject: Function):void => {
+        return new Promise((resolve: Function, reject: Function): void => {
             let iterations = 100000,  // 100k
                 timer = new Timer();
 
@@ -76,14 +76,14 @@ export class Person {
             timer.end();
 
             // update UI
-            this.createEl('p', '#third-result', `doSomethingDifferent took ${timer.formatDuration()} ms`);
+            this.createEl('p', '#third-result', `doSomethingDifferent took ${timer.formatDuration(true /* truncate */)} ms`);
 
             resolve();
         });
     }
 
     public doSomethingWhichFails(): Promise<Function> {
-        return new Promise((resolve: Function, reject: Function):void => {
+        return new Promise((resolve: Function, reject: Function): void => {
             reject();
         });
     }
@@ -98,6 +98,6 @@ export class Person {
     }
 
     private getTextEl(): any {
-        return $('#text')
+        return $('#text');
     }
 }
