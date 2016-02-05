@@ -142,7 +142,7 @@ define(function() { return /******/ (function(modules) { // webpackBootstrap
             };
             Person.prototype.saySorry = function () {
                 // update UI
-                this.createEl('p', '#sorry', 'Sorry to see you go');
+                this.createEl('p', '#sorry', 'Sorry to see you go!');
             };
             Person.prototype.createEl = function (tag, id, text) {
                 return $('body').append("<" + tag + " id=\"" + id + "\">" + text + "</" + tag + ">");

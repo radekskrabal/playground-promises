@@ -90,7 +90,7 @@ export class Person {
 
     public saySorry(): void {
         // update UI
-        this.createEl('p', '#sorry', 'Sorry to see you go');
+        this.createEl('p', '#sorry', 'Sorry to see you go!');
     }
 
     private createEl(tag: string, id: string, text: string): any {
