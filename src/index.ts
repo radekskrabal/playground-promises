@@ -1,5 +1,3 @@
-"use strict";
-
 import {Person} from "./Person";
 
 $(document).ready(function () {

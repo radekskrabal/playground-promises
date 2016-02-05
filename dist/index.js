@@ -63,7 +63,6 @@ define(function() { return /******/ (function(modules) { // webpackBootstrap
         "use strict";
         var Person = (function () {
             function Person(name) {
-                this.id = new Date().getTime().toString();
                 this.name = name;
             }
             Person.prototype.doSomething = function () {
