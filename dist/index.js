@@ -50,7 +50,9 @@ define(function() { return /******/ (function(modules) { // webpackBootstrap
             var worker = new Person_1.Person('Long Running Pal');
             worker.doSomething()
                 .then(function () { return worker.doSomethingElse(); })
-                .then(function () { return worker.doSomethingDifferent(); });
+                .then(function () { return worker.doSomethingDifferent(); })
+                .then(function () { return worker.doSomethingWhichFails(); })
+                .catch(function () { return worker.saySorry(); });
         });
     }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 
@@ -132,6 +134,15 @@ define(function() { return /******/ (function(modules) { // webpackBootstrap
                     _this.createEl('p', '#third-result', "doSomethingDifferent took " + timer.formatDuration() + " ms");
                     resolve();
                 });
+            };
+            Person.prototype.doSomethingWhichFails = function () {
+                return new Promise(function (resolve, reject) {
+                    reject();
+                });
+            };
+            Person.prototype.saySorry = function () {
+                // update UI
+                this.createEl('p', '#sorry', 'Sorry to see you go');
             };
             Person.prototype.createEl = function (tag, id, text) {
                 return $('body').append("<" + tag + " id=\"" + id + "\">" + text + "</" + tag + ">");

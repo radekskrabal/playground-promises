@@ -82,6 +82,17 @@ export class Person {
         });
     }
 
+    public doSomethingWhichFails(): Promise<Function> {
+        return new Promise((resolve: Function, reject: Function):void => {
+            reject();
+        });
+    }
+
+    public saySorry(): void {
+        // update UI
+        this.createEl('p', '#sorry', 'Sorry to see you go');
+    }
+
     private createEl(tag: string, id: string, text: string): any {
         return $('body').append(`<${tag} id="${id}">${text}</${tag}>`);
     }
